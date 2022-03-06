@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace ConsoleApp1
             if (args.Length < 1) throw new ArgumentException();
             var websiteUrl = args[0];
             var httpClient = new HttpClient();
-            var response = await HttpClient.GetAsync(websiteUrl);
+            var response = await httpClient.GetAsync(websiteUrl);
 
             Console.WriteLine(response);
 
@@ -26,6 +27,7 @@ namespace ConsoleApp1
             var b = @"\a";
 
             var matchCollection = regex.Matches(content);
+
 
             var set = new HashSet<string>();
 
