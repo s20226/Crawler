@@ -21,7 +21,7 @@ namespace ConsoleApp1
             var content = await response.Content.ReadAsStringAsync();
             Console.WriteLine(content);
 
-            var regex = new Regex(@""); //do uzupelnienia
+            var regex = new Regex(@""); //do uzupelnienia test
 
             var a = $"Content: {content}";
             var b = @"\a";
